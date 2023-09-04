@@ -11,17 +11,20 @@ export const MemoExample = () => {
     [numberObj.input]
   );
 
+  const [num, setNum] = useState<number>(0);
+  const doubleNumber2 = useMemo(() => slowFunction(num), [num]);
+
   return (
     <>
       <h2>useMemo</h2>
 
-      <button onClick={() => setNumberObj({ input: 3 })}>Double 3</button>
+      <button onClick={() => setNumberObj({ input: 5 })}>Double 5</button>
 
       <p className="use-memo__text">{doubleNumber}</p>
 
-      {/* <button onClick={() => setNumberObj({ input: 5 })}>Double 5</button>
+      <button onClick={() => setNum(() => num + 1)}>Double {num}</button>
 
-      <p className="use-memo__text">{doubleNumber}</p> */}
+      <p className="use-memo__text">{doubleNumber2}</p>
     </>
   );
 };
