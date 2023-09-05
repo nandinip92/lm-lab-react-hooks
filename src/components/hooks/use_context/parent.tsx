@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from "react";
+import { useState, createContext } from "react";
 import { Child1 } from "./child_1";
 import { Child2 } from "./child_2";
 
