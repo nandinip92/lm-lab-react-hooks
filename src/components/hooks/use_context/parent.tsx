@@ -25,6 +25,7 @@ export const Parent = () => {
     padding: "2rem",
     margin: "2rem",
   };
+
   const toggleTheme = () => {
     setDarkTheme((prevDarkTheme) => !prevDarkTheme);
   };
